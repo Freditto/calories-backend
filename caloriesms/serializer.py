@@ -48,6 +48,7 @@ class ProfilePostSerializer(serializers.ModelSerializer):
             'goal',
             'age',
             'height',
+            'weight',
             'bmi',
             'dietary_restriction'
         ]
@@ -63,6 +64,7 @@ class ProfileGetSerializer(serializers.ModelSerializer):
             'goal',
             'age',
             'height',
+            'weight',
             'bmi',
             'dietary_restriction'
         ]
