@@ -33,6 +33,7 @@ class Profile(models.Model):
     age = models.IntegerField()
     baseline_activity = models.ForeignKey(BaseLineActivity, on_delete=models.CASCADE)
     height = models.IntegerField()
+    weight = models.IntegerField()
     bmi = models.FloatField()
     dietary_restriction = models.CharField(max_length=20, choices=dietary)
 

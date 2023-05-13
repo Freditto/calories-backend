@@ -1,0 +1,45 @@
+[  {    "bmi": "Underweight",    "goal": "Lose weight",    "exercise": [      {        "name": "Jogging",        "calories_burned_per_hour": 400,        "duration_minutes": 60      },      {        "name": "Cycling",        "calories_burned_per_hour": 500,        "duration_minutes": 45      },      {        "name": "Swimming",        "calories_burned_per_hour": 600,        "duration_minutes": 30      }    ]
+  },
+  {
+    "bmi": "Normal",
+    "goal": "Maintain weight",
+    "exercise": [
+      {
+        "name": "Yoga",
+        "calories_burned_per_hour": 200,
+        "duration_minutes": 60
+      },
+      {
+        "name": "Walking",
+        "calories_burned_per_hour": 250,
+        "duration_minutes": 30
+      },
+      {
+        "name": "Pilates",
+        "calories_burned_per_hour": 300,
+        "duration_minutes": 45
+      }
+    ]
+  },
+  {
+    "bmi": "Overweight",
+    "goal": "Gain weight",
+    "exercise": [
+      {
+        "name": "Weight lifting",
+        "calories_burned_per_hour": 400,
+        "duration_minutes": 60
+      },
+      {
+        "name": "CrossFit",
+        "calories_burned_per_hour": 500,
+        "duration_minutes": 45
+      },
+      {
+        "name": "Boxing",
+        "calories_burned_per_hour": 600,
+        "duration_minutes": 30
+      }
+    ]
+  }
+]

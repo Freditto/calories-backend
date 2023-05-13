@@ -1,0 +1,110 @@
+[
+  {
+    "activity": "Sedentary",
+    "bmi": "Underweight",
+    "calories": {
+      "loss": 1600,
+      "maintain": 1800,
+      "gain": 2000
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "bmi": "Normal",
+    "calories": {
+      "loss": 1800,
+      "maintain": 2000,
+      "gain": 2200
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "bmi": "Overweight",
+    "calories": {
+      "loss": 2000,
+      "maintain": 2200,
+      "gain": 2400
+    }
+  },
+  {
+    "activity": "Lightly Active",
+    "bmi": "Underweight",
+    "calories": {
+      "loss": 1800,
+      "maintain": 2000,
+      "gain": 2200
+    }
+  },
+  {
+    "activity": "Lightly Active",
+    "bmi": "Normal",
+    "calories": {
+      "loss": 2000,
+      "maintain": 2200,
+      "gain": 2400
+    }
+  },
+  {
+    "activity": "Lightly Active",
+    "bmi": "Overweight",
+    "calories": {
+      "loss": 2200,
+      "maintain": 2400,
+      "gain": 2600
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "bmi": "Underweight",
+    "calories": {
+      "loss": 2000,
+      "maintain": 2200,
+      "gain": 2400
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "bmi": "Normal",
+    "calories": {
+      "loss": 2200,
+      "maintain": 2400,
+      "gain": 2600
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "bmi": "Overweight",
+    "calories": {
+      "loss": 2400,
+      "maintain": 2600,
+      "gain": 2800
+    }
+  },
+  {
+    "activity": "Very Active",
+    "bmi": "Underweight",
+    "calories": {
+      "loss": 2200,
+      "maintain": 2400,
+      "gain": 2600
+    }
+  },
+  {
+    "activity": "Very Active",
+    "bmi": "Normal",
+    "calories": {
+      "loss": 2400,
+      "maintain": 2600,
+      "gain": 2800
+    }
+  },
+  {
+    "activity": "Very Active",
+    "bmi": "Overweight",
+    "calories": {
+      "loss": 2600,
+      "maintain": 2800,
+      "gain": 3000
+    }
+  }
+]

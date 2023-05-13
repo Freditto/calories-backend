@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Grilled Chicken",
+    "type": "protein",
+    "serving_amount": "1 piece (85g)",
+    "calories": 142,
+    "vegetarian": false
+  },
+  {
+    "name": "Broccoli",
+    "type": "vegetable",
+    "serving_amount": "1 cup (91g)",
+    "calories": 55,
+    "vegetarian": true
+  },
+  {
+    "name": "Salmon",
+    "type": "protein",
+    "serving_amount": "3 oz (85g)",
+    "calories": 175,
+    "vegetarian": false
+  },
+  {
+    "name": "Brown Rice",
+    "type": "carbohydrate",
+    "serving_amount": "1 cup cooked (195g)",
+    "calories": 216,
+    "vegetarian": true
+  },
+  {
+    "name": "Avocado",
+    "type": "fat",
+    "serving_amount": "1/2 medium (68g)",
+    "calories": 114,
+    "vegetarian": true
+  },
+  {
+    "name": "Sweet Potato",
+    "type": "carbohydrate",
+    "serving_amount": "1 medium (114g)",
+    "calories": 103,
+    "vegetarian": true
+  },
+  {
+    "name": "Almonds",
+    "type": "fat",
+    "serving_amount": "1/4 cup (28g)",
+    "calories": 160,
+    "vegetarian": true
+  },
+  {
+    "name": "Black Beans",
+    "type": "protein",
+    "serving_amount": "1/2 cup (86g)",
+    "calories": 114,
+    "vegetarian": true
+  },
+  {
+    "name": "Spinach",
+    "type": "vegetable",
+    "serving_amount": "1 cup (30g)",
+    "calories": 7,
+    "vegetarian": true
+  },
+  {
+    "name": "Eggs",
+    "type": "protein",
+    "serving_amount": "1 large (50g)",
+    "calories": 78,
+    "vegetarian": false
+  },
+  {
+    "name": "Greek Yogurt",
+    "type": "protein",
+    "serving_amount": "1 cup (227g)",
+    "calories": 130,
+    "vegetarian": false
+  },
+  {
+    "name": "Oatmeal",
+    "type": "carbohydrate",
+    "serving_amount": "1/2 cup dry (40g)",
+    "calories": 150,
+    "vegetarian": true
+  }
+]

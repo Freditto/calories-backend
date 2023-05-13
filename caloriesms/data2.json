@@ -1,0 +1,113 @@
+[
+  {
+    "activity": "Sedentary",
+    "goal": "Lose Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 1200,
+      "maximum": 1400
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "goal": "Maintain Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 1500,
+      "maximum": 1700
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "goal": "Gain Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 1800,
+      "maximum": 2000
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "goal": "Lose Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 1400,
+      "maximum": 1600
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "goal": "Maintain Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 1700,
+      "maximum": 1900
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "goal": "Gain Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 2000,
+      "maximum": 2200
+    }
+  },
+  {
+    "activity": "Very Active",
+    "goal": "Lose Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 1600,
+      "maximum": 1800
+    }
+  },
+  {
+    "activity": "Very Active",
+    "goal": "Maintain Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 2000,
+      "maximum": 2200
+    }
+  },
+  {
+    "activity": "Very Active",
+    "goal": "Gain Weight",
+    "bmi": "18.5-24.9",
+    "calories": {
+      "minimum": 2400,
+      "maximum": 2600
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "goal": "Lose Weight",
+    "bmi": "25-29.9",
+    "calories": {
+      "minimum": 1500,
+      "maximum": 1700
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "goal": "Maintain Weight",
+    "bmi": "25-29.9",
+    "calories": {
+      "minimum": 1800,
+      "maximum": 2000
+    }
+  },
+  {
+    "activity": "Sedentary",
+    "goal": "Gain Weight",
+    "bmi": "25-29.9",
+    "calories": {
+      "minimum": 2100,
+      "maximum": 2300
+    }
+  },
+  {
+    "activity": "Moderately Active",
+    "goal": "L"
+  }]
