@@ -1,4 +1,5 @@
 from .views import *
+from .tosavedata import *
 from django.urls import path
 app_name = 'caloriesms'
 
@@ -13,4 +14,5 @@ urlpatterns = [
     path('food-daily-meal-record', FoodDailyMealRecordView.as_view()),
     path('recommendation-calories', GetRecommendationCaloriesView.as_view()),
     path('recommendation-exercise', GetRecommendationExerciseView.as_view()),
+    path('demo', demo)
 ]
