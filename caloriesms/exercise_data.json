@@ -1,4 +1,24 @@
-[  {    "bmi": "Underweight",    "goal": "Lose weight",    "exercise": [      {        "name": "Jogging",        "calories_burned_per_hour": 400,        "duration_minutes": 60      },      {        "name": "Cycling",        "calories_burned_per_hour": 500,        "duration_minutes": 45      },      {        "name": "Swimming",        "calories_burned_per_hour": 600,        "duration_minutes": 30      }    ]
+[
+  {
+  "bmi": "Underweight",
+    "goal": "Lose weight",
+    "exercise": [
+      {
+        "name": "Jogging",
+        "calories_burned_per_hour": 400,
+        "duration_minutes": 60
+      },
+      {
+        "name": "Cycling",
+        "calories_burned_per_hour": 500,
+        "duration_minutes": 45
+      },
+      {
+        "name": "Swimming",
+        "calories_burned_per_hour": 600,
+        "duration_minutes": 30
+      }
+    ]
   },
   {
     "bmi": "Normal",

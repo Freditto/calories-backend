@@ -1,0 +1,23 @@
+[
+   {
+    "max": "24.9",
+    "min": "18.5",
+    "description": "Normal"
+  },
+  {
+    "max": "100.0",
+    "min": "25.0",
+    "description": "Overweight"
+  },
+  {
+    "max": "100.9",
+    "min": "30.0",
+    "description": "Obese"
+  },
+  {
+    "max": "18.5",
+    "min": "0.0",
+    "description": "Underweight"
+  }
+]
+

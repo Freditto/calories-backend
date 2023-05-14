@@ -83,9 +83,9 @@ class DailyMealRecord(models.Model):
 
 
 class Food(models.Model):
-    choice = (('Carbs', 'Carbs'), ('Protein', 'Protein'), ('Fat', 'Fat'))
+    # choice = (('Carbs', 'Carbs'), ('Protein', 'Protein'), ('Fat', 'Fat'))
     name = models.CharField(max_length=200)
-    food_type = models.CharField(max_length=200, choices=choice)
+    food_type = models.CharField(max_length=200)
     service_size = models.CharField(max_length=200)
     calories = models.DecimalField(max_digits=10, decimal_places=0)
     is_vegetarian_food = models.BooleanField(default=True)
@@ -122,6 +122,8 @@ class Feedback(models.Model):
 
 class Exercise(models.Model):
     name = models.CharField(max_length=200)
+    calories_burned_per_hour = models.DecimalField(max_digits=10, decimal_places=2)
+    duration_minutes = models.DecimalField(max_digits=10, decimal_places=2)
     bmi = models.ForeignKey(Bmi, on_delete=models.CASCADE)
 
     def __str__(self):
