@@ -50,6 +50,7 @@ class ProfilePostSerializer(serializers.ModelSerializer):
             'height',
             'weight',
             'bmi',
+            'baseline_activity',
             'dietary_restriction'
         ]
 
@@ -66,6 +67,7 @@ class ProfileGetSerializer(serializers.ModelSerializer):
             'height',
             'weight',
             'bmi',
+            'baseline_activity',
             'dietary_restriction'
         ]
         depth = 2

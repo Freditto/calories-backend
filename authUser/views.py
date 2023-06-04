@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from .token import get_user_token
 from .models import User
 from django.views import generic
-
+from caloriesms.models import *
 
 # Create your views here.
 
@@ -50,11 +50,38 @@ def LoginView(request):
     if user is not None:
         login(request, user)
         my_user = User.objects.values('id', 'username', 'email', 'password', 'phone').get(username=username)
+        profile_to_check = Profile.objects.filter(user=User.objects.get(username=username))
+        if len(profile_to_check) == 0:
+            profile = False
+        else:
+            profile = True
+            x = Profile.objects.filter(user=User.objects.get(username=username))[0]
+            bmis = Bmi.objects.all()
+            for d in bmis:
+                if d.min_range <= x.bmi <= d.max_range:
+                    bmi_name = d.name
+                else:
+                    continue
 
+            profile_data = {
+                'gender': x.gender,
+                'goal': x.goal.name,
+                'age': x.age,
+                'baseline_activity_id': x.baseline_activity.id,
+                # 'bmi_id': x.bmi.id,
+                'bmi': x.bmi,
+                'bmi_name': bmi_name,
+                'goal_id': x.goal.id,
+                'baseline_activity': x.baseline_activity.name,
+                'height': x.height,
+                'weight': x.weight,
+            }
         response = {
             'msg': 'success',
             'tokens': get_user_token(user),
             'user': my_user,
+            'profile': profile,
+            'profile_data': profile_data
         }
 
         return Response(response)

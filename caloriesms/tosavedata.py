@@ -176,13 +176,69 @@ def demo(request):
 
 
     data3 = [
-          {
-            "name": "Grilled Chicken",
+        {
+            "name": "Noodle",
+            "type": "pasta",
+            "serving_amount": "1 cup",
+            "calories": 221,
+            "vegetarian": True
+        },
+        {
+            "name": "Soup",
+            "type": "soup",
+            "serving_amount": "1 cup",
+            "calories": 100,
+            "vegetarian": True
+        },
+        {
+            "name": "Pizza",
+            "type": "snack",
+            "serving_amount": "1 slice",
+            "calories": 285,
+            "vegetarian": True
+        },
+        {
+            "name": "Rice",
+            "type": "grain",
+            "serving_amount": "1 cup",
+            "calories": 205,
+            "vegetarian": True
+        },
+        {
+            "name": "Roasted meat",
             "type": "protein",
-            "serving_amount": "1 piece (85g)",
-            "calories": 142,
+            "serving_amount": "3 oz",
+            "calories": 250,
             "vegetarian": False
-          },
+        },
+        {
+            "name": "Roasted fish",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 200,
+            "vegetarian": False
+        },
+        {
+            "name": "Fried fish",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 180,
+            "vegetarian": False
+        },
+        {
+            "name": "Fried chicken",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 250,
+            "vegetarian": False
+        },
+        {
+            "name": "Banana",
+            "type": "fruit",
+            "serving_amount": "1 medium",
+            "calories": 105,
+            "vegetarian": True
+        },
           {
             "name": "Broccoli",
             "type": "vegetable",
@@ -259,7 +315,203 @@ def demo(request):
             "serving_amount": "1/2 cup dry (40g)",
             "calories": 150,
             "vegetarian": True
-          }
+          },
+        {
+            "name": "Rice",
+            "type": "grain",
+            "serving_amount": "1 cup",
+            "calories": 205,
+            "vegetarian": True
+        },
+        {
+            "name": "Ugali",
+            "type": "starch",
+            "serving_amount": "1 piece",
+            "calories": 350,
+            "vegetarian": True
+        },
+        {
+            "name": "Dough",
+            "type": "bread",
+            "serving_amount": "1 piece",
+            "calories": 100,
+            "vegetarian": True
+        },
+        {
+            "name": "Fried fish",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 180,
+            "vegetarian": False
+        },
+        {
+            "name": "Fried chicken",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 250,
+            "vegetarian": False
+        },
+        {
+            "name": "Beans",
+            "type": "protein",
+            "serving_amount": "1 cup",
+            "calories": 220,
+            "vegetarian": True
+        },
+        {
+            "name": "Coconut peas",
+            "type": "vegetable",
+            "serving_amount": "1 cup",
+            "calories": 180,
+            "vegetarian": True
+        },
+        {
+            "name": "Roasted fish",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 200,
+            "vegetarian": False
+        },
+        {
+            "name": "Roasted meat",
+            "type": "protein",
+            "serving_amount": "3 oz",
+            "calories": 250,
+            "vegetarian": False
+        },
+        {
+            "name": "Banana meat",
+            "type": "fruit",
+            "serving_amount": "1 piece",
+            "calories": 120,
+            "vegetarian": True
+        },
+        {
+            "name": "Spinach",
+            "type": "vegetable",
+            "serving_amount": "1 cup",
+            "calories": 7,
+            "vegetarian": True
+        },
+        {
+            "name": "Pilau",
+            "type": "rice",
+            "serving_amount": "1 cup",
+            "calories": 350,
+            "vegetarian": True
+        },
+        {
+            "name": "Chips",
+            "type": "snack",
+            "serving_amount": "1 cup",
+            "calories": 312,
+            "vegetarian": True
+        },
+        {
+            "name": "Egg chop",
+            "type": "snack",
+            "serving_amount": "1 piece",
+            "calories": 150,
+            "vegetarian": False
+        },
+        {
+            "name": "Fried bread",
+            "type": "bread",
+            "serving_amount": "1 piece",
+            "calories": 200,
+            "vegetarian": True
+        },
+        {
+            "name": "Chapati",
+            "type": "bread",
+            "serving_amount": "1 piece",
+            "calories": 120,
+            "vegetarian": True
+        },
+        {
+            "name": "Sausage",
+            "type": "protein",
+            "serving_amount": "1 piece",
+            "calories": 250,
+            "vegetarian": False
+        },
+        {
+            "name": "Frying eggs",
+            "type": "protein",
+            "serving_amount": "2 eggs",
+            "calories": 140,
+            "vegetarian": False
+        },
+        {
+            "name": "Boiled egg",
+            "type": "protein",
+            "serving_amount": "1 egg",
+            "calories": 78,
+            "vegetarian": False
+        },
+        {
+            "name": "Sponge cake",
+            "type": "dessert",
+            "serving_amount": "1 slice",
+            "calories": 220,
+            "vegetarian": True
+        },
+        {
+            "name": "Donut",
+            "type": "dessert",
+            "serving_amount": "1 piece",
+            "calories": 260,
+            "vegetarian": True
+        },
+        {
+            "name": "Boiled cassava",
+            "type": "starch",
+            "serving_amount": "1 cup",
+            "calories": 330,
+            "vegetarian": True
+        },
+        {
+            "name": "Coffee",
+            "type": "beverage",
+            "serving_amount": "1 cup",
+            "calories": 2,
+            "vegetarian": True
+        },
+        {
+            "name": "Tea",
+            "type": "beverage",
+            "serving_amount": "1 cup",
+            "calories": 2,
+            "vegetarian": True
+        },
+        {
+            "name": "Milk",
+            "type": "beverage",
+            "serving_amount": "1 cup",
+            "calories": 103,
+            "vegetarian": True
+        },
+        {
+            "name": "Smoothie",
+            "type": "beverage",
+            "serving_amount": "1 cup",
+            "calories": 150,
+            "vegetarian": True
+        },
+        {
+            "name": "Yogurt",
+            "type": "dairy",
+            "serving_amount": "1 cup",
+            "calories": 150,
+            "vegetarian": True
+        },
+        {
+            "name": "Coffee with milk",
+            "type": "beverage",
+            "serving_amount": "1 cup",
+            "calories": 30,
+            "vegetarian": True
+        }
         ]
     for data in data3:
         food = Food.objects.create(
@@ -339,7 +591,7 @@ def demo(request):
     for data in data4:
         for d in data['exercise']:
             bmi = Bmi.objects.get(name=data['bmi'])
-            exercise_save = Exercise.objects.cerate(
+            exercise_save = Exercise.objects.create(
                 name=d['name'],
                 calories_burned_per_hour=d['calories_burned_per_hour'],
                 duration_minutes=d['duration_minutes'],

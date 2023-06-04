@@ -17,14 +17,15 @@ class ProfileView(APIView):
         serialized = ProfilePostSerializer(data=request.data)
         if serialized.is_valid():
             serialized.save()
-            return Response(serialized.validated_data)
+            return Response(serialized.data)
 
         return Response(serialized.errors)
 
     @staticmethod
     def get(request, *args, **kwargs):
         queryset = Profile.objects.all()
-        serialized = ProfileGetSerializer(instance=queryset, many=True)
+        user = request.GET.get('user_id')
+        serialized = ProfileGetSerializer(instance=queryset.filter(user=user), many=True)
         return Response(serialized.data)
 
 
