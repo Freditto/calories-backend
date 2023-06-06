@@ -52,6 +52,7 @@ def LoginView(request):
         my_user = User.objects.values('id', 'username', 'email', 'password', 'phone').get(username=username)
         profile_to_check = Profile.objects.filter(user=User.objects.get(username=username))
         if len(profile_to_check) == 0:
+            profile_data={}
             profile = False
         else:
             profile = True
