@@ -73,7 +73,7 @@ class DailyMealRecord(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(auto_now_add=True)
     day = models.CharField(max_length=20)
-    total_calories = models.DecimalField(max_digits=10, decimal_places=0)
+    total_calories = models.DecimalField(max_digits=10, decimal_places=0, null=True)
 
     def __str__(self):
         return f'{self.day}'

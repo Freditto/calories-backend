@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -5,6 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView
 from .serializer import *
 from .models import *
+from rest_framework.decorators import api_view, permission_classes
 
 
 # Create your views here.
@@ -97,6 +99,7 @@ class DailyMealRecordView(APIView):
     #     "day": "monday"
     # },
     # ]
+
     @staticmethod
     def get(request, *args, **kwargs):
         queryset = DailyMealRecord.objects.all()
@@ -138,7 +141,11 @@ class FoodDailyMealRecordView(APIView):
     @staticmethod
     def get(request, *args, **kwargs):
         queryset = FoodDailyMealRecord.objects.all()
-        serialized = FoodDailyMealRecordGetSerializer(instance=queryset, many=True)
+        queryset2 = DailyMealRecord.objects.all()
+        user=request.GET.get('user')
+        day=request.GET.get('day')
+        dmr = queryset2.filter(day=day, user=user)
+        serialized = FoodDailyMealRecordGetSerializer(instance=queryset.filter(id=dmr[0].id), many=True)
         return Response(serialized.data)
 
 
@@ -166,3 +173,43 @@ class GetRecommendationExerciseView(APIView):
         data = queryset.filter(bmi=bmi)
         serialized = ExerciseGetSerializer(instance=data, many=True)
         return Response(serialized.data)
+
+
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def DailyFoodView(request):
+    data = request.data
+    dmr = DailyMealRecord.objects.create(
+        user=User.objects.get(id=data[0]['user']),
+        # date=data[0]['date'],
+        day=data[0]['day']
+    )
+    tc = 0
+    for d in data:
+        fdmr = FoodDailyMealRecord.objects.create(
+            daily_meal_record=dmr,
+            food=Food.objects.get(name=d['food'])
+        )
+        fdmr.save()
+        f = Food.objects.get(name=d['food'])
+        tc = tc + f.calories
+    dmr.total_calories = tc
+    dmr.save()
+    return Response({"message": "success"})
+
+
+# [
+    # {
+    #     "user": 1,
+    #     "food": "name",
+    #     "day": "monday"
+    # },
+# ]
+
+
+@api_view(["GET"])
+@permission_classes([AllowAny])
+def DailyFoodGetView(request, user_id, day):
+    data = DailyMealRecord.objects.values('day', 'date', 'total_calories').filter(Q(user=User.objects.get(id=user_id)) and Q(day=day))
+    print(data)
+    return Response(data[0])
