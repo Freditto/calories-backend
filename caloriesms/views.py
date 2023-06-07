@@ -145,9 +145,10 @@ class FoodDailyMealRecordView(APIView):
         user=request.GET.get('user')
         day=request.GET.get('day')
         dmr = queryset2.filter(day=day, user=user)
-        serialized = FoodDailyMealRecordGetSerializer(instance=queryset.filter(id=dmr[0].id), many=True)
-        return Response(serialized.data)
-
+        print(dmr.values('id'))
+        # serialized = FoodDailyMealRecordGetSerializer(instance=queryset, many=True)
+        # return Response(serialized.data[0])
+        return Response({})
 
 class GetRecommendationCaloriesView(APIView):
     permission_classes = (AllowAny,)
@@ -179,6 +180,7 @@ class GetRecommendationExerciseView(APIView):
 @permission_classes([AllowAny])
 def DailyFoodView(request):
     data = request.data
+    print(data)
     dmr = DailyMealRecord.objects.create(
         user=User.objects.get(id=data[0]['user']),
         # date=data[0]['date'],
@@ -209,7 +211,35 @@ def DailyFoodView(request):
 
 @api_view(["GET"])
 @permission_classes([AllowAny])
-def DailyFoodGetView(request, user_id, day):
-    data = DailyMealRecord.objects.values('day', 'date', 'total_calories').filter(Q(user=User.objects.get(id=user_id)) and Q(day=day))
-    print(data)
-    return Response(data[0])
+def DailyFoodGetView(request):
+    user=request.GET.get('user')
+    day=request.GET.get('day')
+    data = DailyMealRecord.objects.filter(user=User.objects.get(id=user))
+    if data[1].day == day:
+        data2 = FoodDailyMealRecord.objects.filter(daily_meal_record=data[0])
+        # daily_meal_record = data[0]
+    foods = []
+    print(data[0].total_calories)
+    for d in data2:
+        foods.append(
+            {
+                "food":d.food.name
+            }
+        )
+    print(foods)
+    return Response(foods)
+
+
+@api_view(["GET"])
+@permission_classes([AllowAny])
+def DailyCaloriesGetView(request, user_id, day):
+    data2 = DailyMealRecord.objects.values('day', 'date', 'total_calories').filter(user=User.objects.get(id=user_id))
+    d2 = [entry for entry in data2]
+    response = {'total_calories': ''}
+    for d in d2:
+        if d['day'] == day:
+            response = d
+        else:
+            continue
+    print(response)
+    return Response(response)
