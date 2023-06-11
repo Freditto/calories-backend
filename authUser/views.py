@@ -62,9 +62,10 @@ def LoginView(request):
                 if d.min_range <= x.bmi <= d.max_range:
                     bmi_name = d.name
                 else:
-                    continue
+                    bmi_name = "Over weight"
 
             profile_data = {
+                'id': x.id,
                 'gender': x.gender,
                 'goal': x.goal.name,
                 'age': x.age,
