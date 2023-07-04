@@ -160,7 +160,10 @@ class GetRecommendationCaloriesView(APIView):
         baseline_activity = request.GET.get('baseline_activity')
         goal = request.GET.get('goal')
         bmi = request.GET.get('bmi')
-        data = queryset.filter(baseline_activity=baseline_activity, goal=goal)
+        print(queryset)
+        data = queryset.filter(baseline_activity=baseline_activity)
+        print("iiiiiiiiiiii")
+        print(data)
         serialized = BmiGoalGetSerializer(instance=data, many=True)
         return Response(serialized.data)
 

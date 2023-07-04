@@ -529,17 +529,17 @@ def demo(request):
                 "goal": "Lose weight",
                 "exercise": [
                   {
-                    "name": "Jogging",
+                    "name": "Leg Raise",
                     "calories_burned_per_hour": 400,
                     "duration_minutes": 60
                   },
                   {
-                    "name": "Cycling",
+                    "name": "Mountain Climber",
                     "calories_burned_per_hour": 500,
                     "duration_minutes": 45
                   },
                   {
-                    "name": "Swimming",
+                    "name": "Crunch",
                     "calories_burned_per_hour": 600,
                     "duration_minutes": 30
                   }
@@ -550,17 +550,17 @@ def demo(request):
                 "goal": "Maintain weight",
                 "exercise": [
                   {
-                    "name": "Yoga",
+                    "name": "Front Lunges",
                     "calories_burned_per_hour": 200,
                     "duration_minutes": 60
                   },
                   {
-                    "name": "Walking",
+                    "name": "Crunch",
                     "calories_burned_per_hour": 250,
                     "duration_minutes": 30
                   },
                   {
-                    "name": "Pilates",
+                    "name": "Leg Raise",
                     "calories_burned_per_hour": 300,
                     "duration_minutes": 45
                   }
@@ -571,17 +571,17 @@ def demo(request):
                 "goal": "Gain weight",
                 "exercise": [
                   {
-                    "name": "Weight lifting",
+                    "name": "Front Lunges",
                     "calories_burned_per_hour": 400,
                     "duration_minutes": 60
                   },
                   {
-                    "name": "CrossFit",
+                    "name": "Crunch",
                     "calories_burned_per_hour": 500,
                     "duration_minutes": 45
                   },
                   {
-                    "name": "Boxing",
+                    "name": "Leg Raise",
                     "calories_burned_per_hour": 600,
                     "duration_minutes": 30
                   }
