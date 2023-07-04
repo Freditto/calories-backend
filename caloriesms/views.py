@@ -160,7 +160,7 @@ class GetRecommendationCaloriesView(APIView):
         baseline_activity = request.GET.get('baseline_activity')
         goal = request.GET.get('goal')
         bmi = request.GET.get('bmi')
-        data = queryset.filter(baseline_activity=baseline_activity, goal=goal, bmi=bmi)
+        data = queryset.filter(baseline_activity=baseline_activity, goal=goal)
         serialized = BmiGoalGetSerializer(instance=data, many=True)
         return Response(serialized.data)
 
@@ -241,7 +241,7 @@ def DailyFoodGetView(request):
             # daily_meal_record = data[0]
             print(data2)
         foods = []
-        # print(data[0].total_calories)
+        print(data[0].total_calories)
         for d in data2:
             foods.append(
                 {
