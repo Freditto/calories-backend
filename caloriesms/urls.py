@@ -20,5 +20,6 @@ urlpatterns = [
     path('food-daily-meal-record', FoodDailyMealRecordView.as_view()),
     path('recommendation-calories', GetRecommendationCaloriesView.as_view()),
     path('recommendation-exercise', GetRecommendationExerciseView.as_view()),
+    path('get-updated-profile/<int:user_id>', GetProfileOnly),
     # path('demo', demo)
 ]
