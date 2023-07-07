@@ -312,7 +312,8 @@ def DeleteToDayFoodsView(request):
 @api_view(["GET"])
 @permission_classes([AllowAny])
 def GetProfileOnly(request, user_id):
-    profile = Profile.objects.get(user=User.objects.get(id=user_id))[0]
+    print(User.objects.get(id=user_id))
+    profile = Profile.objects.filter(user=User.objects.get(id=user_id))[0]
     bmis = Bmi.objects.all()
     for d in bmis:
         if d.min_range <= profile.bmi <= d.max_range:
