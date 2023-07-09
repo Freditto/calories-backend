@@ -26,7 +26,7 @@ class BaseLineActivity(models.Model):
 
 class Profile(models.Model):
     choice = (('male', 'male'), ('female', 'female'))
-    dietary = (('Vegetarian', 'Vegetarian'), ('Non Vegetarian', 'Non Vegetarian'))
+    dietary = (('Vegetarian', 'Vegetarian'), ('None Vegetarian', 'None Vegetarian'))
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     gender = models.CharField(max_length=20, choices=choice)
     goal = models.ForeignKey(Goal, on_delete=models.CASCADE)
