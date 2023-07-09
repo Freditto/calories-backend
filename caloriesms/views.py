@@ -315,11 +315,17 @@ def GetProfileOnly(request, user_id):
     print(User.objects.get(id=user_id))
     profile = Profile.objects.filter(user=User.objects.get(id=user_id))[0]
     bmis = Bmi.objects.all()
+    print('BMI OF USER', x.bmi)
+    bmi_name = None
     for d in bmis:
-        if d.min_range <= profile.bmi <= d.max_range:
-            bmi_name = d.name
+        if bmi_name is None:
+            if d.min_range <= x.bmi <= d.max_range:
+                bmi_name = d.name
         else:
-            bmi_name = "Over weight"
+            break
+    if bmi_name is None:
+        bmi_name = "Overweight"
+        
     data = {
         "id": profile.id,
         "gender": profile.gender,
