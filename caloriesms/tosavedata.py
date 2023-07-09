@@ -23,7 +23,7 @@ def demo(request):
            {
             "max": "24.9",
             "min": "18.5",
-            "description": "Normal"
+            "description": "Normal Weight"
           },
           {
             "max": "100.0",
